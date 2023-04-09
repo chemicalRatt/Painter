@@ -27,7 +27,6 @@ body {
 
 .container div {
     box-sizing: border-box;
-    border: 1px solid lightgray;
 }
 
 .header {
