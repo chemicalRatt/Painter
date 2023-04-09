@@ -1,4 +1,3 @@
-//create a 16x16 grid
 const GRID_CONTAINER = document.getElementById("grid-container");
 
 function initializeGrid(size){
@@ -8,8 +7,10 @@ function initializeGrid(size){
     for (let i = 0; i < totalSize; i++){
         const div = document.createElement("div");
         div.style.flexBasis = containerSize/size + "px";
+        div.addEventListener("mouseenter", function(){
+            div.style.backgroundColor = "black";});
         GRID_CONTAINER.appendChild(div);
     }
 }
 
-initializeGrid(16);
+initializeGrid(64);
