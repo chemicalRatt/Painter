@@ -2,20 +2,14 @@
 const GRID_CONTAINER = document.getElementById("grid-container");
 
 function initializeGrid(size){
-    const totalSize = (size*size) + size;
-    const mod = size + 1;
+    const totalSize = (size*size);
+    const containerSize = GRID_CONTAINER.clientWidth;
 
-    for (let i = 1; i < totalSize; i++){
+    for (let i = 0; i < totalSize; i++){
         const div = document.createElement("div");
-        if(i % mod === 0){
-            div.style.cssText = "border: 0; height: 0; width: 100%";
-        } 
-        else{
-            div.style.cssText = "border: 1px solid black; height: 25px; width: 25px";
-        }
-
+        div.style.flexBasis = containerSize/size + "px";
         GRID_CONTAINER.appendChild(div);
     }
 }
 
-initializeGrid(32);
+initializeGrid(16);
