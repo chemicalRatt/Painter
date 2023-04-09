@@ -10,6 +10,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 .container {
@@ -27,4 +28,9 @@ body {
 .container div {
     box-sizing: border-box;
     border: 1px solid lightgray;
+}
+
+.header {
+    display: flex;
+    gap: 5em;
 }
